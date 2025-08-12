@@ -1,8 +1,9 @@
 const express =require('express');
-require('dotenv').config();
+require('dotenv').config({ quiet: true });
+
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT
 
 //route handeler 
 app.get("/",(req,res)=>{
@@ -15,5 +16,5 @@ app.get("/about",(req,res)=>{
 })
 
 app.listen(PORT,()=>{
-    console.log(`App listen on port ${PORT}`);
+    console.log(`App listen on port ${PORT}`)
 })
